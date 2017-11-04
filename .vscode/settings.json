@@ -1,0 +1,10 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/.DS_Store": true,
+        "react-starter" : false,
+        "react-complete" : false,
+        "redux-starter" : false
+      }
+}
