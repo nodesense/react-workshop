@@ -6,12 +6,12 @@ Node Package Manager (npm) is installed along with Node.js installation. `npm` c
 
 #### To create npm project,
 
-> mkdir react-app
-> cd react-app
+> > mkdir react-app
+> > cd react-app
 
 below command creates default *package.json* in your current working directory *react-app*
 
-> npm init -y
+> > npm init -y
 
 #### install react packages
 
