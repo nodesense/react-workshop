@@ -26,7 +26,7 @@ For React-Router,
 
 For redux,
 
-> npm install redux redux-thunk --save
+> npm install redux react-redux redux-thunk --save
 
 For RxJS,
 
@@ -50,6 +50,17 @@ Create the `.babelrc` in the project root directory
 } 
 ```
 
+
+Few more things with babel setup, when we need support for ES8 async/await keywords [to avoid  regeneratorRuntime issue]
+
+> npm install --save babel-polyfill
+
+Below lines must be added on top of main.js file.
+
+```
+import "babel-polyfill";
+```
+
 #### Webpack setup
 
 Webpack bundles many javascripts file into single js file, helps to load files faster in the browser. 
@@ -58,4 +69,14 @@ We use src/main.js as an entry file, all files imported within main.js and its s
 
 > npm install webpack webpack-dev-server babel-core babel-loader --save-dev
 
+Install below plug-ins to handle css entries specific to components on its relative path.
+
+> npm install extract-text-webpack-plugin css-loader file-loader style-loader --save-dev
+
 webpack config files are kept under src/config/webpack.config.js, src/config/webpack.prod.config.js
+
+For production bundle, we need to copy the assets folders (copy-webpack-plugin), generate scripts and link tag dynamically based on hash code (html-webpack-plugin), clear the dist folder for every build (clean-webpack-plugin), For that, we need addtional plug-ins.
+
+
+> npm install copy-webpack-plugin html-webpack-plugin clean-webpack-plugin --save-dev
+

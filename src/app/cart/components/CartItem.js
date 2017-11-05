@@ -50,7 +50,7 @@ export default class CartItem extends Component {
         console.log("CartItem render ", item.id);
 
         return (
-            <tr >
+            <tr>
                 <td>{item.name}</td>
                 
                 <td>{item.price}</td>
