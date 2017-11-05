@@ -17,21 +17,22 @@ export default class Cart extends Component {
             price: 100 + Math.ceil(Math.random() * 1000),
             qty: 1
         }
+
+        this.props.actions.addItemToCart(item);
     }
  
 
     removeItem(id) {
-         
+        this.props.actions.removeItemFromCart(id);
     }
 
     updateItem(id, qty) {
-         
+        this.props.actions.updateItemInCart(id, qty);
     }
 
     emptyCart() {
-         
+        this.props.actions.emptyCart();
     }
-     
     
     render() {
         console.log("Cart render");

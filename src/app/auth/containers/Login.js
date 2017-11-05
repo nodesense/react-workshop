@@ -2,18 +2,12 @@
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 
-import Cart from "../components/Cart";
+import Login from "../components/Login";
 import * as actions from "../state/actions";
-import {reCalculate} from "../state/selectors";
-
 
 const mapStateToProps = (state) => {
-    let {amount, count} = reCalculate(state.cartItems);
-
     return {
-         items: state.cartItems,
-         amount: amount,
-         count: count
+         
     }
 }
 
@@ -24,4 +18,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, 
-                    mapDispatchToProps) (Cart)
+                    mapDispatchToProps) (Login)

@@ -12,13 +12,36 @@ import {
         
 import App from "./App";
 import Home from "./components/Home";
-import About from "./components/About";
+//import About from "./components/About";
 import Contact from "./components/Contact";
-import Cart from "./cart/components/Cart";
+
 import NotFound from "./components/NotFound";
 
 //import ProductList from "./components/ProductList";
 import ProductList from "./product/containers/ProductList";
+import Cart from "./cart/containers/Cart";
+import Login from "./auth/containers/Login";
+
+
+//Lazy load modules, split bigger modules into smaller
+import Loadable from 'react-loadable';
+
+function Loading() {
+    return (
+        <div>Loading ...</div>
+    )
+}
+
+const LoadableAboutComponent = Loadable({
+    loader: () => import('./components/About'),
+    loading: Loading,
+  });
+
+const LoadableCartComponent = Loadable({
+    loader: () => import('./cart/containers/Cart'),
+    loading: Loading,
+  });
+
 
 export default function Routes(props) {
     return (
@@ -27,9 +50,14 @@ export default function Routes(props) {
                 <Switch>
                     <Route path='/' exact component={Home} />
                     <Route path='/cart'  component={Cart} />
-                    <Route path='/about'  component={About} />
+                    
+                    {/* <Route path='/about'  component={About} /> */}
+
+                    <Route path='/about'  component={LoadableAboutComponent} />
+
                     <Route path='/contact'  component={Contact} />
                     <Route path="/products" component={ProductList} />
+                    <Route path="/login" component={Login} />
                     <Route path='*'  component={NotFound} />
                 </Switch>
             </App>

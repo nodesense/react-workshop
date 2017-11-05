@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 
-import Navigation from "./Navigation";
+import Navigation from "../containers/Navigation";
 
 export default class Header extends Component {
     constructor(props) {

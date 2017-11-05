@@ -68,7 +68,7 @@ export default class CartItem extends Component {
                 <td>{item.price * item.qty}</td>
                 
                 <td>
-                    <button onClick={() => this.props.onUpdate(item.id, this.state.qty) }   >
+                    <button onClick={() => this.props.onUpdate(item.id, parseInt(this.state.qty) || 0) }   >
                         Update
                     </button>
                 </td>

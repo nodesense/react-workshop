@@ -3,18 +3,28 @@ import * as ActionTypes from "./ActionTypes";
 //action creators are plain function, they create 
 //plain objects
 
-export const addItemToCart = (item) => {
+export const addItemToCart = (product) => {
     return {
         type: ActionTypes.ADD_ITEM_TO_CART,
         payload: {
-            item: item
+            item: {
+                id :  product.id,
+                name: product.name,
+                qty: product.qty || 1,
+                price: product.price
+            }
         }
     }
 }
 
 
 export const removeItemFromCart = (id) => {
-    //TODO
+       return {
+        type: ActionTypes.REMOVE_ITEM_FROM_CART,
+        payload: {
+            id: id
+        }
+    }
 }
 
 

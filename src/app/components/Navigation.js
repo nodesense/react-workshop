@@ -45,6 +45,21 @@ export default function Navigation(props) {
                        activeClassName="success" >
                        Not Found
                </NavLink>
+
+               { !props.authenticated &&
+               <NavLink to="/login" 
+                       className="button"  
+                       activeClassName="success" >
+                       Login
+               </NavLink>
+               }
+
+                { props.authenticated &&
+                <button onClick={() => props.logout(props.history)} 
+                          >
+                        Logout
+                </button>
+               }
                
             </div>
         )

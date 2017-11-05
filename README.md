@@ -36,6 +36,15 @@ For jQuery
 
 > npm install jquery --save
 
+For Fetch (Ajax calls) polyfills
+
+> npm install whatwg-fetch --save
+
+
+For code splitting, split a modules that can be loaded separately 
+
+> npm install react-loadable  --save
+
 ## Babel Setup
 
 Babel is a transpiler, convert ES2016 (ES6), ES2016, ES2017, ES.NEXT to the ES5, the old JavaScript.
@@ -46,7 +55,10 @@ Create the `.babelrc` in the project root directory
 
 ```
 {
-    "presets": ["env", "stage-2", "react"]
+    "presets": ["env", "stage-2", "react"],
+     "plugins": [
+        "syntax-dynamic-import"
+    ]
 } 
 ```
 
@@ -60,6 +72,10 @@ Below lines must be added on top of main.js file.
 ```
 import "babel-polyfill";
 ```
+
+To support code splitting, lazy laod components bundle on need,
+
+> npm install babel-plugin-syntax-dynamic-import --save-dev
 
 ## Webpack setup
 

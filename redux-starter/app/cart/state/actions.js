@@ -4,12 +4,9 @@ import * as ActionTypes from "./ActionTypes";
 //plain objects
 
 export const addItemToCart = (item) => {
-    return {
-        type: ActionTypes.ADD_ITEM_TO_CART,
-        payload: {
-            item: item
-        }
-    }
+    
+         //TODO
+    
 }
 
 
@@ -36,12 +33,17 @@ export const  emptyCart = () => {
 }
  
 
-// export function addItemToCart(item) {
+// export function addItemToCart(product) {
 //     return {
 //         type: ActionTypes.ADD_ITEM_TO_CART,
-//         payload: {
-//             item: item
-//         }
+            // payload: {
+            //     item: {
+            //         id :  product.id,
+            //         name: product.name,
+            //         qty: product.qty || 1,
+            //         price: product.price
+            //     }
+            // }
 //     }
 // }
  

@@ -6,11 +6,13 @@ import thunk from "redux-thunk";
  
 import cartReducer from "./cart/state/reducer";
 import productReducer from "./product/state/reducer";
- 
+import authReducer from "./auth/state/reducer";
+
 let rootReducer = combineReducers({
     //stateName: reducer fn
     cartItems: cartReducer,
-    productState: productReducer
+    productState: productReducer,
+    authState: authReducer
 //
 })
  

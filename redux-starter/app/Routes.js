@@ -17,6 +17,8 @@ import Contact from "./components/Contact";
 import Cart from "./cart/components/Cart";
 import NotFound from "./components/NotFound";
 
+
+
 //import ProductList from "./components/ProductList";
 import ProductList from "./product/containers/ProductList";
 
