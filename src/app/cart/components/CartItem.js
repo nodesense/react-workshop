@@ -32,7 +32,9 @@ export default class CartItem extends Component {
     
     componentDidMount() {
         //ref
-        this.inputElement.focus();
+        if (this.inputElement) {
+            this.inputElement.focus();            
+        }
     }
 
     onValueChange(e) {

@@ -4,7 +4,7 @@
 
 Node Package Manager (npm) is installed along with Node.js installation. `npm` command helps to install packages from registry.npmjs.org website. `npm` command install packages on *node_modules* folder on the project directory.
 
-#### To create npm project,
+## To create npm project,
 
 > mkdir react-app
 
@@ -14,7 +14,7 @@ below command creates default *package.json* in your current working directory *
 
 > npm init -y
 
-#### install react packages
+## install react packages
 
 on npm 3.x, *--save* option helps to save the install package name in the package dependencies.
 
@@ -36,7 +36,7 @@ For jQuery
 
 > npm install jquery --save
 
-#### Babel Setup
+## Babel Setup
 
 Babel is a transpiler, convert ES2016 (ES6), ES2016, ES2017, ES.NEXT to the ES5, the old JavaScript.
 
@@ -61,7 +61,7 @@ Below lines must be added on top of main.js file.
 import "babel-polyfill";
 ```
 
-#### Webpack setup
+## Webpack setup
 
 Webpack bundles many javascripts file into single js file, helps to load files faster in the browser. 
 
@@ -80,3 +80,20 @@ For production bundle, we need to copy the assets folders (copy-webpack-plugin),
 
 > npm install copy-webpack-plugin html-webpack-plugin clean-webpack-plugin --save-dev
 
+## JEST
+
+Jest is a test runner, uses jasmine for test description, comes with all packages pre-installed including test coverage. 
+
+`__mocks__` is useful if you want to mock any files in the system, so that jest can import mock file rather than real project file.
+
+> npm install jest babel-jest enzyme enzyme-adapter-react-16 react-test-renderer --save-dev
+
+to run test cases,
+
+> npm test
+
+to run test cases with code coverage,
+
+> npm run test-coverage
+
+test cases to be stored in `__tests__` folder or stored with extenstion .spec.js or .test.js file in project directory. 

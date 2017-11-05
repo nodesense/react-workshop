@@ -57,6 +57,15 @@ var config = {
     ]
   },
   
+
+  //the config entry given here can be imported into any file using
+  //import config from config; 
+  //the imported config contains all the development.json content
+  externals: {
+    config: JSON.stringify(require(path.join(__dirname,  "production.json")))
+  },
+ 
+
   //debug, es6 to es5 mapping
   devtool: 'source-map',
 
