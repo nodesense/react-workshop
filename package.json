@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config src/config/webpack.config.js --hot --inline --progress",
-    "build": "webpack --config src/config/webpack.prod.config.js  --progress",
+    "start": "webpack-dev-server --config  config/webpack.config.js --hot --inline --progress --open",
+    "build": "webpack --config  config/webpack.prod.config.js  --progress",
     "test": "jest",
     "test-coverage": "jest --coverage"
   },

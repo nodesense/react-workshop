@@ -1,11 +1,11 @@
 var webpack = require('webpack');
 var path = require('path');
 
-// ../ works as well
-var APP_DIR = path.resolve(__dirname, '../../src');
+
+var APP_DIR = path.resolve(__dirname, '../src');
 
 // ../ works as well
-var BUILD_DIR = path.resolve(__dirname, '../../dist');
+var BUILD_DIR = path.resolve(__dirname, '../dist');
 
 //copy assets folder/static files to dist folder
 var CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -135,15 +135,7 @@ var config = {
       })
 
   ],
-
-  // devServer: {
-  //   contentBase: APP_DIR,
-  //  // port: 8080,
-
-  //   historyApiFallback: {
-  //     index: '/'
-  //   }
-  // }
+ 
 
 };
 

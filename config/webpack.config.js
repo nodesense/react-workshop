@@ -3,7 +3,7 @@ var path = require('path');
 
 
 // ../ works as well
-var APP_DIR = path.resolve(__dirname, '../../src');
+var APP_DIR = path.resolve(__dirname, '../src');
 
 
 //generate script and link tags dynamically with hash code
@@ -106,6 +106,7 @@ var config = {
     contentBase: APP_DIR,
     //port: 8080,
 
+    //for supporting history api fallback
     historyApiFallback: {
       index: '/'
     }
