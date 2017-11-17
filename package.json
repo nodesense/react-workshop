@@ -2,7 +2,7 @@
   "name": "react-workshop",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  
   "scripts": {
     "start": "webpack-dev-server --config  config/webpack.config.js --hot --inline --progress --open",
     "build": "webpack --config  config/webpack.prod.config.js  --progress",

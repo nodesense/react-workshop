@@ -1,29 +1,27 @@
-import React, {Component} from "react";
-import PropTypes from "prop-types";
 
-export default class App extends Component {
-    constructor(props) {
-        super(props);
-    }
-    
-    componentDidMount() {
-        
-    }
-    
+//import from node_modules
+import React from "react";
+
+//default import
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import Home from "./components/Home";
+import About from "./components/About";
+
+export class App extends React.Component {
+    //keyword
+    //return a virtual DOM
     render() {
+        //JSX
         return (
-            <div> 
-            <h2>React App</h2>
+            <div>
+                <Header  title="React App" />
+                <Home />
+                <About />
+                <Footer year={2017} company="React App" />
             </div>
         )
+        
     }
-} 
-
-
-App.defaultProps = {
-    
-}
-
-App.propTypes = {
-    
 }

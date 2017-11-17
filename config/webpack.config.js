@@ -5,7 +5,7 @@ var path = require('path');
 // ../ works as well
 var APP_DIR = path.resolve(__dirname, '../src');
 
-
+    
 // //generate script and link tags dynamically with hash code
 // var HtmlWebpackPlugin = require('html-webpack-plugin');
 
