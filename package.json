@@ -50,7 +50,8 @@
   },
   "jest": {
     "setupFiles": [
-      "./src/setupTests.js"
+      "./test-config/setupTests.js",
+      "./test-config/browser-mocks.js"
     ]
   }
 }

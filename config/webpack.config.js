@@ -6,15 +6,15 @@ var path = require('path');
 var APP_DIR = path.resolve(__dirname, '../src');
 
 
-//generate script and link tags dynamically with hash code
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+// //generate script and link tags dynamically with hash code
+// var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-//generate script and link tags dynamically with hash code
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+// //generate script and link tags dynamically with hash code
+// var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-//Useful for extracting import "mystyle.css" used within js code
-//used along with css-loaders
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+// //Useful for extracting import "mystyle.css" used within js code
+// //used along with css-loaders
+// var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 var config = {
@@ -39,27 +39,30 @@ var config = {
       },
 
 
-      { test: /\.css$/, 
-        use: ExtractTextPlugin.extract({
-				fallback: "style-loader",
-				use: {
-					loader: "css-loader",
-					options: {
-						sourceMap: true
-					}
-				},
-				publicPath: "../"
-      }) 
-     }
-    ]
+    //   { test: /\.css$/, 
+    //     use: ExtractTextPlugin.extract({
+		// 		fallback: "style-loader",
+		// 		use: {
+		// 			loader: "css-loader",
+		// 			options: {
+		// 				sourceMap: true
+		// 			}
+		// 		},
+		// 		publicPath: "../"
+    //   }) 
+    //  }
+
+
+    
+     ]
   },
 
   //the config entry given here can be imported into any file using
   //import config from config; 
   //the imported config contains all the development.json content
-  externals: {
-    config: JSON.stringify(require(path.join(__dirname,  "development.json")))
-  },
+  // externals: {
+  //   config: JSON.stringify(require(path.join(__dirname,  "development.json")))
+  // },
  
   
   //debug, es6 to es5 mapping
@@ -67,38 +70,38 @@ var config = {
 
   plugins: [
 
-    new webpack.DefinePlugin ({
-      VERSION: JSON.stringify("1.0.0"),
-      PRODUCTION: JSON.stringify("false"),
-      BASE_NAME: JSON.stringify(""),
-    }),
+  //   new webpack.DefinePlugin ({
+  //     VERSION: JSON.stringify("1.0.0"),
+  //     PRODUCTION: JSON.stringify("false"),
+  //     BASE_NAME: JSON.stringify(""),
+  //   }),
 
 
 
 
-   //create css file from import "mystyle.css" statements
-   new ExtractTextPlugin({
-    filename: "[name].css",
-    disable: false,
-    allChunks: true
-  }),
+  //  //create css file from import "mystyle.css" statements
+  //  new ExtractTextPlugin({
+  //   filename: "[name].css",
+  //   disable: false,
+  //   allChunks: true
+  // }),
 
     
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: 'vendor.bundle.js',
-      minChunks:  function(module, count) {
-          var context = module.context;
-          return context && context.indexOf('node_modules') >= 0;
-      },
-  }),
+  //   new webpack.optimize.CommonsChunkPlugin({
+  //     name: 'vendor',
+  //     filename: 'vendor.bundle.js',
+  //     minChunks:  function(module, count) {
+  //         var context = module.context;
+  //         return context && context.indexOf('node_modules') >= 0;
+  //     },
+  // }),
 
 
   //insert link and script tags inside index.html output file 
-  new HtmlWebpackPlugin({
-    template: './src/index.html', //input file
-    filename: 'index.html', //output file name
-  })
+  // new HtmlWebpackPlugin({
+  //   template: './src/index.html', //input file
+  //   filename: 'index.html', //output file name
+  // })
 
   ],
 

@@ -82,10 +82,7 @@ Create the `.babelrc` in the project root directory
 
 ```
 {
-    "presets": ["env", "stage-2", "react"],
-     "plugins": [
-        "syntax-dynamic-import"
-    ]
+    "presets": ["env", "stage-2", "react"]
 } 
 ```
 
@@ -99,11 +96,7 @@ Below lines must be added on top of main.js file.
 ```
 import "babel-polyfill";
 ```
-
-To support code splitting, lazy laod components bundle on need,
-
-> npm install babel-plugin-syntax-dynamic-import --save-dev
-
+ 
 ## Webpack setup
 
 Webpack bundles many javascripts file into single js file, helps to load files faster in the browser. 
@@ -140,3 +133,6 @@ to run test cases with code coverage,
 > npm run test-coverage
 
 test cases to be stored in `__tests__` folder or stored with extenstion .spec.js or .test.js file in project directory. 
+
+
+Please make sure that you have
